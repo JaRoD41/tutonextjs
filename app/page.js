@@ -1,7 +1,12 @@
-"use client"
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
+import Link from 'next/link'
 
 export default function Home() {
-	return <main className={styles.main}></main>
+	return (
+		<main>
+			<Link href="/">Home</Link>
+			<Link href="/cv">CV</Link>
+			<Link href="/contact">Contact</Link>
+		</main>
+	)
 }
