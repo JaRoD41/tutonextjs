@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const jeu = () => {
 	const [number, setNumber] = useState(0)
@@ -9,6 +9,13 @@ const jeu = () => {
 	const decrement = () => {
 		setNumber(number - 1)
 	}
+
+	useEffect(() => {
+		if (number > 10) {
+			alert('Vous avez dépassé le nombre maximum')
+      setNumber(10)
+		}
+	}, [number])
 	return (
 		<>
 			<div>{number}</div>
