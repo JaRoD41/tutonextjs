@@ -3,7 +3,14 @@ import { useState } from 'react'
 
 const jeu = () => {
 	const [number, setNumber] = useState(0)
-	return <div>{number}</div>
+	const increment = () => {
+		setNumber(number + 1)
+	}
+	return (
+		<>
+			<div>{number}</div>
+			<button onClick={() => increment()}>Ajouter 1</button>
+		</>
+	)
 }
-
 export default jeu
