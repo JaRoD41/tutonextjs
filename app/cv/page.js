@@ -1,8 +1,10 @@
-import React from 'react'
+import NouveauCV from "../components/NouveauCV"
 
 const cv = () => {
   return (
-    <div>cv</div>
+    <>
+      <NouveauCV title="Voici Mon Nouveau CV"/>
+    </>
   )
 }
 
